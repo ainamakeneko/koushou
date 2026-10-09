@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0e18"><title>嘘つきギツネの交渉航路｜第二章 二つの時刻表</title><link rel="stylesheet" href="chapter2.css"></head>
+<body>
+<main id="app">
+ <section id="welcome" class="welcome">
+  <div class="welcome-copy"><p class="eyebrow">嘘つきギツネの交渉航路　/　WORLD 02</p><h1>二つの<br><em>時刻表</em></h1><p class="lede">こちらは、早く出たい。<br>あの船は、荷物を待っている。<br>交換するのは、予約だけだろうか。</p><div class="welcome-meta"><span>関門港アマナ</span><span>目安 15〜25分</span><span>行動で進む時計</span></div><div id="saveNotice" role="status"></div><div class="welcome-actions"><button id="resume" class="primary" hidden>第二章をつづける</button><button id="start" class="primary">第二章をはじめる</button><a href="index.html" class="button secondary">第一章へ</a></div><p class="small">途中経過は、このブラウザーに自動保存されます。<br>第一章のどの結末からでも遊べる、別の寄港記録です。</p></div>
+  <div class="welcome-art" aria-hidden="true"><div class="orbit-ring"></div><div class="big-time">10:00<span>出航予約</span></div><div class="small-time">20:00<span>こちらの予約</span></div><div id="welcomeCrew"></div></div>
+ </section>
+ <section id="game" hidden>
+  <header class="hud"><a href="index.html" aria-label="第一章のタイトルに戻る" class="brand">FOX / 02</a><div><span class="hud-label">現在</span><b id="clock">00:00</b></div><div><span class="hud-label">寄港予算</span><b id="money">15,000 Cr</b></div><div class="goal"><span class="hud-label">今便に間に合う出航</span><b>18:00まで</b></div><button id="journalButton" class="icon-button">帳面</button><button id="menuButton" class="icon-button" aria-label="章のメニュー">☰</button></header>
+  <div id="warning" role="status" class="warning" hidden></div>
+  <div class="play-layout"><div class="world-column"><div id="stage" class="stage" aria-label="港の様子"><div id="stageArt"></div><div class="stage-label"><span>AMANA TRANSIT PORT</span><h2 id="locationName"></h2><p id="locationDetail"></p></div><div id="crew" class="crew" aria-hidden="true"></div></div>
+   <nav class="locations" aria-label="移動先" id="locations"></nav>
+   <section class="action-panel"><div class="section-heading"><h2 id="actionHeading">聞く・調べる</h2><span>移動は30分</span></div><div id="actions" class="actions"></div></section>
+  </div>
+  <aside class="decision-column"><section class="status-card"><p class="eyebrow">いまの約束</p><p id="promise"></p><button id="consult" class="secondary">仲間に相談する <small>時間消費なし</small></button></section><section class="route-panel"><div class="section-heading"><h2>出航を決める</h2><span id="routeCount"></span></div><div id="routes"></div><p class="small">確認画面で、費用と条件を見てから決められます。</p></section></aside></div>
+ </section>
+ <section id="ending" class="ending" hidden></section>
+</main>
+<div id="dialogLayer" class="dialog-layer" hidden><section class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="speaker"><div id="portrait" class="portrait" aria-hidden="true"></div><div class="dialog-copy"><p id="speaker"></p><p id="dialogText"></p><div class="dialog-controls"><span id="dialogProgress"></span><button id="next" class="primary">つづきへ <span aria-hidden="true">▼</span></button></div></div></section></div>
+<div id="modalLayer" class="modal-layer" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><header><h2 id="modalTitle"></h2><button id="closeModal" aria-label="閉じる">閉じる</button></header><div id="modalBody"></div></section></div>
+<div id="toast" role="status" hidden></div>
+<script src="chapter-assets.js"></script><script src="chapter2-engine.js"></script><script src="chapter2-ui.js"></script>
+</body></html>
